@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bilder – WC-Wagen Marty</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f9fcff;
+      color: #222;
+    }
+    header {
+      background-color: #cde7ff;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header h1 { margin: 0; color: #004a8f; font-size: 1.5rem; }
+    nav a {
+      color: #004a8f;
+      text-decoration: none;
+      margin-left: 1.5rem;
+      font-weight: 600;
+    }
+    nav a:hover { text-decoration: underline; }
+    main {
+      padding: 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+    }
+    .gallery img {
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    footer {
+      background-color: #cde7ff;
+      text-align: center;
+      padding: 1rem;
+    }
+    .icons a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #004a8f;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>WC-Wagen Marty</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="bilder.html">Bilder</a>
+      <a href="details.html">Details</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Bildergalerie</h2>
+    <p>Einblicke in unseren modernen und gepflegten WC-Wagen:</p>
+    <div class="gallery">
+      <!-- Hier kannst du später deine eigenen Bilder einfügen -->
+      <img src="beispiel1.jpg" alt="Außenansicht WC-Wagen">
+      <img src="beispiel2.jpg" alt="Innenraum WC-Wagen">
+      <img src="beispiel3.jpg" alt="Herrenbereich">
+      <img src="beispiel4.jpg" alt="Damenbereich">
+    </div>
+  </main>
+
+  <footer>
+    <div class="icons">
+      📞 <a href="tel:+41792268350">079 226 83 50</a> |
+      📧 <a href="mailto:marty.wwv@gmail.com">marty.wwv@gmail.com</a> |
+      📸 <a href="https://www.instagram.com/wc_wagen_marty" target="_blank">@wc_wagen_marty</a>
+    </div>
+    <p>Region Zürich Oberland | © 2025 WC-Wagen Marty</p>
+  </footer>
+</body>
+</html>
