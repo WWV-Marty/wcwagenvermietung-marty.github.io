@@ -11,6 +11,7 @@
       background-color: #f9fcff;
       color: #222;
     }
+
     header {
       background-color: #cde7ff;
       padding: 1rem 2rem;
@@ -18,42 +19,88 @@
       justify-content: space-between;
       align-items: center;
     }
-    header h1 { margin: 0; color: #004a8f; font-size: 1.5rem; }
+
+    header h1 {
+      margin: 0;
+      color: #004a8f;
+      font-size: 1.5rem;
+    }
+
     nav a {
       color: #004a8f;
       text-decoration: none;
       margin-left: 1.5rem;
       font-weight: 600;
     }
-    nav a:hover { text-decoration: underline; }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
     main {
       padding: 2rem;
       max-width: 1000px;
       margin: auto;
     }
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 15px;
-    }
-    .gallery img {
+
+    img {
       width: 100%;
       border-radius: 8px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      display: block;
     }
+
+    .section {
+      margin-bottom: 25px;
+    }
+
+    .grid-4 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 15px;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+    }
+
     footer {
       background-color: #cde7ff;
       text-align: center;
       padding: 1rem;
     }
+
     .icons a {
       margin: 0 10px;
       text-decoration: none;
       color: #004a8f;
       font-weight: bold;
     }
+
+    /* Responsive */
+    @media (max-width: 800px) {
+      .grid-4 { grid-template-columns: repeat(2, 1fr); }
+      .grid-3 { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 500px) {
+      .grid-4,
+      .grid-3,
+      .grid-2 {
+        grid-template-columns: 1fr;
+      }
+    }
   </style>
 </head>
+
 <body>
   <header>
     <h1>WC-Wagen Marty</h1>
@@ -65,15 +112,43 @@
   </header>
 
   <main>
-    <h2>Bildergalerie</h2>
-    <p>Einblicke in unseren modernen und gepflegten WC-Wagen:</p>
-    <div class="gallery">
-      <!-- Hier kannst du später deine eigenen Bilder einfügen -->
-      <img src="beispiel1.jpg" alt="Außenansicht WC-Wagen">
-      <img src="beispiel2.jpg" alt="Innenraum WC-Wagen">
-      <img src="beispiel3.jpg" alt="Herrenbereich">
-      <img src="beispiel4.jpg" alt="Damenbereich">
+
+    <!-- Anlass -->
+    <div class="section">
+      <img src="anlass.jpg" alt="">
     </div>
+
+    <!-- Front / Heck / Links / Rechts -->
+    <div class="section grid-4">
+      <img src="front.jpg" alt="">
+      <img src="heck.jpg" alt="">
+      <img src="links.jpg" alt="">
+      <img src="rechts.jpg" alt="">
+    </div>
+
+    <!-- Grundriss -->
+    <div class="section">
+      <img src="grundriss.jpg" alt="">
+    </div>
+
+    <!-- Innen -->
+    <div class="section grid-2">
+      <img src="innen-lavabo.jpg" alt="">
+      <img src="innen-wc.jpg" alt="">
+    </div>
+
+    <!-- Hebeanlage -->
+    <div class="section grid-3">
+      <img src="hebeanlage-1.jpg" alt="">
+      <img src="hebeanlage-2.jpg" alt="">
+      <img src="hebeanlage-3.jpg" alt="">
+    </div>
+
+    <!-- Zubehör Deckel -->
+    <div class="section">
+      <img src="zubehoer-deckel.jpg" alt="">
+    </div>
+
   </main>
 
   <footer>
@@ -86,4 +161,3 @@
   </footer>
 </body>
 </html>
-
